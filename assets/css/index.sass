@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap')
+
+$accent: #ff8c00
+$bg: #161616
+$bg2: #1c1c1c
+$bg3: #333333
+$text: #fff
+$text2: #aaa
+$border: #282828
+$hover: lighten(#161616, 1%)
+
+$headerSize: 75px
+
+@import 'header'
+@import 'main'
+@import 'home'
+@import 'footer'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Rubik', sans-serif
+
+    &:focus
+        outline: none
+
+html
+    scroll-behavior: smooth
+
+body
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    background: $bg2
+    color: $text
+
+a
+    color: $accent
+
+.container
+    width: 100%
+    max-width: 1300px
+    margin: 0 auto
+    padding: 0 2rem
+
+input
+    border: 1px solid $border
+    padding: .7rem 1rem
+    border-radius: 10px
+    font-size: 1rem
+    background: $bg3
+    color: $text
+
+::placeholder
+    color: lighten($text, 50%)
+
+.icon-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    border: none
+    width: 2rem
+    height: 2rem
+    border-radius: 50%
+    background: none
+    font-size: 1.25rem
+    color: $text2
+    text-decoration: none
+    cursor: pointer
+    transition: background .2s ease, box-shadow .2s ease
+
+    &:hover
+        box-shadow: 0 0 0 10px $hover
+        background: $hover
+
+    &:active
+        box-shadow: 0 0 0 8px $hover
+
+.btn
+    border-radius: 40px
+    padding: 1rem 1.5rem
+    font-size: 0.9rem
+    text-decoration: none
+    background: $accent
+    color: $bg
+    border: none
+    cursor: pointer
+    white-space: nowrap
+    transition: opacity .2s, transform .2s ease
+
+    &:hover
+        opacity: .9
+
+    &:active
+        transform: translateY(2px)
+
+.btn-outlined
+    border-radius: 40px
+    padding: 1rem 1.5rem
+    font-size: 0.9rem
+    text-decoration: none
+    color: $accent
+    border: 1px solid $accent
+    background: none
+    cursor: pointer
+    white-space: nowrap
+    transition: background .2s, color .2s, transform .2s ease
+
+    &:hover
+        background: $accent
+        color: $bg
+
+    &:active
+        transform: translateY(2px)
