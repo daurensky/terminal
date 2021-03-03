@@ -1,5 +1,5 @@
 <?php
-require_once 'blocks/header.php';
+require_once 'core/blocks/header.php';
 
 $slides = [
     ['src' => 'slide1.webp', 'title' => 'Платежные терминалы'],
@@ -129,4 +129,4 @@ $partners = [
 
 <?php
 $scripts = ['assets/js/home.js'];
-require_once 'blocks/footer.php';
+require_once 'core/blocks/footer.php';

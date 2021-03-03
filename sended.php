@@ -1,4 +1,7 @@
-<?php require_once 'blocks/header.php' ?>
+<?php
+require_once 'core/blocks/header.php';
+
+?>
 
 <main class="sended">
     <div class="container">
@@ -10,4 +13,4 @@
     </div>
 </main>
 
-<?php require_once 'blocks/footer.php' ?>
+<?php require_once 'core/blocks/footer.php' ?>

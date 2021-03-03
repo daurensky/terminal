@@ -1,4 +1,4 @@
-<?php require_once 'blocks/header.php' ?>
+<?php require_once 'core/blocks/header.php' ?>
 
 <main>
     <div class="container">
@@ -8,4 +8,4 @@
     </div>
 </main>
 
-<?php require_once 'blocks/footer.php' ?>
+<?php require_once 'core/blocks/footer.php' ?>
