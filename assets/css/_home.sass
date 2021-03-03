@@ -1,6 +1,5 @@
-main
+main.home
     .glide
-
         .glide__slide
             position: relative
 
@@ -57,3 +56,50 @@ main
                     background: #000
                     width: .7rem
                     height: .7rem
+    .top-sells
+        .wrapper
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            gap: 1rem
+
+            .card
+                display: flex
+                flex-direction: column
+                align-items: center
+                border-radius: 10px
+                background: $bg
+                overflow: hidden
+
+                a
+                    text-decoration: none
+
+                img
+                    width: 100%
+
+                .price
+                    font-weight: bold
+                    margin: 1rem 0
+                    font-size: 1.5rem
+
+                .title
+                    color: $text
+                    margin-bottom: 2rem
+                    transition: color .2s ease
+
+                    &:hover
+                        color: $accent
+
+    .about
+        background: $bg
+
+        p
+            line-height: 1.5rem
+            margin-bottom: 2rem
+            text-align: justify
+
+            &:last-child
+                margin-bottom: 0
+
+    .partners
+        img
+            border-radius: 10px

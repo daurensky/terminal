@@ -51,9 +51,18 @@ header .container .links a:hover {
   background: #191919;
 }
 
-header .container .links a:hover.tel {
-  font-weight: bold;
-  font-size: 1.25rem;
+header .container .links a.active {
+  position: relative;
+}
+
+header .container .links a.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff8c00;
 }
 
 header .container .actions {
@@ -84,7 +93,7 @@ header .container .actions .phone a {
   transition: color .2s ease;
 }
 
-header .container .actions .phone:hover {
+header .container .actions .phone a:hover {
   color: #ff8c00;
 }
 
@@ -96,11 +105,10 @@ main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 5rem 0;
   width: 100%;
 }
 
-main > .container > .title {
+main .container > .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,17 +116,146 @@ main > .container > .title {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
-main .glide .glide__slide {
-  position: relative;
+main .container > .title h1 {
+  font-size: 2rem;
 }
 
-main .glide .glide__slide img {
+main.contacts {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 100%;
 }
 
-main .glide .glide__slide .content {
+main.contacts .info .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0;
+}
+
+main.contacts .info .container div {
+  width: 100%;
+}
+
+main.contacts .info .container div.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main.contacts .info .container div.text .icon-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.contacts .info .container div.text .icon-text i {
+  font-size: 2rem;
+  width: 3rem;
+}
+
+main.contacts .info .container div.text .btn-wrapper {
+  margin-left: 2rem;
+}
+
+main.contacts .profiles .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.contacts .profiles .container .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+}
+
+main.contacts .profiles .container .profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+main.contacts .profiles .container .profile b, main.contacts .profiles .container .profile i, main.contacts .profiles .container .profile p {
+  margin-bottom: 0.3rem;
+}
+
+main.contacts .contact-form {
+  border-top: 1px solid #282828;
+}
+
+main.contacts .contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.contacts .contact-form form .form-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.contacts .contact-form form .form-column .form-group {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  padding: .5rem;
+}
+
+main.contacts .contact-form form .form-column .form-group input, main.contacts .contact-form form .form-column .form-group select, main.contacts .contact-form form .form-column .form-group textarea {
+  width: 100%;
+}
+
+main.contacts .contact-form form .form-column .form-group button {
+  margin-top: 1rem;
+  float: right;
+}
+
+main.home .glide .glide__slide {
+  position: relative;
+}
+
+main.home .glide .glide__slide img {
+  width: 100%;
+}
+
+main.home .glide .glide__slide .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,23 +273,23 @@ main .glide .glide__slide .content {
           transform: translateX(-50%);
 }
 
-main .glide .glide__slide .content .title {
+main.home .glide .glide__slide .content .title {
   color: #000;
   font-weight: bold;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
-main .glide .glide__slide .content .btn-outlined {
+main.home .glide .glide__slide .content .btn-outlined {
   color: #000;
   border-color: #000;
 }
 
-main .glide .glide__slide .content .btn-outlined:hover {
+main.home .glide .glide__slide .content .btn-outlined:hover {
   border-color: #ff8c00;
 }
 
-main .glide .glide__arrow {
+main.home .glide .glide__arrow {
   color: #000;
   border: 2px solid #000;
   border-radius: 50%;
@@ -163,15 +300,15 @@ main .glide .glide__arrow {
   transition: opacity .2s ease;
 }
 
-main .glide .glide__arrow:hover {
+main.home .glide .glide__arrow:hover {
   opacity: 1;
 }
 
-main .glide .glide__arrow i {
+main.home .glide .glide__arrow i {
   font-size: 2rem;
 }
 
-main .glide .glide__bullets {
+main.home .glide .glide__bullets {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,17 +317,97 @@ main .glide .glide__bullets {
           align-items: center;
 }
 
-main .glide .glide__bullets .glide__bullet {
+main.home .glide .glide__bullets .glide__bullet {
   border: 1px solid #000;
   background: none;
   width: 1rem;
   height: 1rem;
 }
 
-main .glide .glide__bullets .glide__bullet.glide__bullet--active {
+main.home .glide .glide__bullets .glide__bullet.glide__bullet--active {
   background: #000;
   width: .7rem;
   height: .7rem;
+}
+
+main.home .top-sells .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+main.home .top-sells .wrapper .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background: #161616;
+  overflow: hidden;
+}
+
+main.home .top-sells .wrapper .card a {
+  text-decoration: none;
+}
+
+main.home .top-sells .wrapper .card img {
+  width: 100%;
+}
+
+main.home .top-sells .wrapper .card .price {
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+main.home .top-sells .wrapper .card .title {
+  color: #fff;
+  margin-bottom: 2rem;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+main.home .top-sells .wrapper .card .title:hover {
+  color: #ff8c00;
+}
+
+main.home .about {
+  background: #161616;
+}
+
+main.home .about p {
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+main.home .about p:last-child {
+  margin-bottom: 0;
+}
+
+main.home .partners img {
+  border-radius: 10px;
+}
+
+main.sended .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
@@ -217,6 +434,7 @@ footer .to-top .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 2rem;
 }
 
 footer .to-top .container i {
@@ -265,16 +483,17 @@ a {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 5rem 2rem;
 }
 
-input {
+input, select, textarea {
   border: 1px solid #282828;
   padding: .7rem 1rem;
   border-radius: 10px;
   font-size: 1rem;
   background: #333333;
   color: #fff;
+  resize: vertical;
 }
 
 ::-webkit-input-placeholder {
@@ -335,6 +554,8 @@ input {
   font-size: 0.9rem;
   text-decoration: none;
   background: #ff8c00;
+  -webkit-box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+          box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
   color: #161616;
   border: none;
   cursor: pointer;

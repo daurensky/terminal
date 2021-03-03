@@ -13,7 +13,9 @@ $headerSize: 75px
 
 @import 'header'
 @import 'main'
+@import 'contacts'
 @import 'home'
+@import 'sended'
 @import 'footer'
 
 *
@@ -42,15 +44,16 @@ a
     width: 100%
     max-width: 1300px
     margin: 0 auto
-    padding: 0 2rem
+    padding: 5rem 2rem
 
-input
+input, select, textarea
     border: 1px solid $border
     padding: .7rem 1rem
     border-radius: 10px
     font-size: 1rem
     background: $bg3
     color: $text
+    resize: vertical
 
 ::placeholder
     color: lighten($text, 50%)
@@ -83,6 +86,7 @@ input
     font-size: 0.9rem
     text-decoration: none
     background: $accent
+    box-shadow: 0 0 10px transparentize($accent, .5)
     color: $bg
     border: none
     cursor: pointer

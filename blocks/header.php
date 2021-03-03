@@ -1,3 +1,11 @@
+<?php
+function currentPage($name) {
+    return $_SERVER['REQUEST_URI'] === "/$name" ? 'class="active"' : '';
+}
+
+$scripts = [];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +24,13 @@
     <header>
         <div class="container">
             <a href="/" class="logo">
-                <img src="https://cashmaster.kz/build/img/logo.svg" alt="Logo" />
+                <img src="assets/img/logo.png" alt="Logo" />
             </a>
             <div class="links">
-                <a href="contacts.php">Контакты</a>
-                <a href="about.php">О компании</a>
-                <a href="catalog.php">Каталог</a>
-                <a href="service.php">Услуги</a>
+                <a href="contacts.php" <?= currentPage('contacts.php') ?>>Контакты</a>
+                <a href="about.php" <?= currentPage('about.php') ?>>О компании</a>
+                <a href="catalog.php" <?= currentPage('catalog.php') ?>>Каталог</a>
+                <a href="service.php" <?= currentPage('service.php') ?>>Услуги</a>
             </div>
             <a href="order.php" class="btn online-order">Онлайн-заявка</a>
             <div class="actions">
