@@ -548,6 +548,20 @@ input, select, textarea {
           box-shadow: 0 0 0 8px #191919;
 }
 
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btns .btn {
+  margin-right: 1rem;
+}
+
+.btns .btn:last-child {
+  margin-right: 0;
+}
+
 .btn {
   border-radius: 40px;
   padding: 1rem 1.5rem;
