@@ -55,7 +55,7 @@
             </div>
         </div>
     </section>
-    <section class="contact-form">
+    <section class="contact-form" id="contact-form">
         <div class="container">
             <div class="title">
                 <h1>Пишите нам</h1>

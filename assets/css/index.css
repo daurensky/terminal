@@ -600,4 +600,110 @@ input, select, textarea {
 ::placeholder {
   color: white;
 }
+<<<<<<< HEAD
+=======
+
+.icon-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: none;
+  font-size: 1.25rem;
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: background .2s ease, -webkit-box-shadow .2s ease;
+  transition: background .2s ease, -webkit-box-shadow .2s ease;
+  transition: background .2s ease, box-shadow .2s ease;
+  transition: background .2s ease, box-shadow .2s ease, -webkit-box-shadow .2s ease;
+}
+
+.icon-btn:hover {
+  -webkit-box-shadow: 0 0 0 10px #191919;
+          box-shadow: 0 0 0 10px #191919;
+  background: #191919;
+}
+
+.icon-btn:active {
+  -webkit-box-shadow: 0 0 0 8px #191919;
+          box-shadow: 0 0 0 8px #191919;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btns .btn {
+  margin-right: 1rem;
+}
+
+.btns .btn:last-child {
+  margin-right: 0;
+}
+
+.btn {
+  border-radius: 40px;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background: #ff8c00;
+  -webkit-box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+          box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+  color: #161616;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-transition: opacity .2s, -webkit-transform .2s ease;
+  transition: opacity .2s, -webkit-transform .2s ease;
+  transition: opacity .2s, transform .2s ease;
+  transition: opacity .2s, transform .2s ease, -webkit-transform .2s ease;
+}
+
+.btn:hover {
+  opacity: .9;
+}
+
+.btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.btn-outlined {
+  border-radius: 40px;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #ff8c00;
+  border: 1px solid #ff8c00;
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-transition: background .2s, color .2s, -webkit-transform .2s ease;
+  transition: background .2s, color .2s, -webkit-transform .2s ease;
+  transition: background .2s, color .2s, transform .2s ease;
+  transition: background .2s, color .2s, transform .2s ease, -webkit-transform .2s ease;
+}
+
+.btn-outlined:hover {
+  background: #ff8c00;
+  color: #161616;
+}
+
+.btn-outlined:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+>>>>>>> 1b606abfd2d5215240ba4414260ccafc1d1aea7f
 /*# sourceMappingURL=index.css.map */
