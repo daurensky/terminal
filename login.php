@@ -1,11 +1,12 @@
 <?php require_once 'core/blocks/header.php' ?>
 
 <main>
-    <div class="container">
-        <div class="title">
-            <h1>Вход</h1>
+    <h1>Вход</h1>
+
+    <section>
+        <div class="container">
         </div>
-    </div>
+    </section>
 </main>
 
 <?php require_once 'core/blocks/footer.php' ?>

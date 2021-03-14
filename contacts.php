@@ -1,11 +1,8 @@
 <?php require_once 'core/blocks/header.php' ?>
 
 <main class="contacts">
-    <div class="container">
-        <div class="title">
-            <h1>Контакты</h1>
-        </div>
-    </div>
+    <h1>Контакты</h1>
+
     <section class="info">
         <div class="container">
             <div class="text">

@@ -6,6 +6,9 @@
             <h1>О компании</h1>
         </div>
     </div>
+    <section>
+
+    </section>
 </main>
 
 <?php require_once 'core/blocks/footer.php' ?>

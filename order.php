@@ -1,11 +1,13 @@
 <?php require_once 'core/blocks/header.php' ?>
 
 <main>
-    <div class="container">
-        <div class="title">
-            <h1>Онлайн-заявка</h1>
+    <h1>Онлайн-заявка</h1>
+
+    <section>
+        <div class="container">
         </div>
-    </div>
+        </div>
+    </section>
 </main>
 
 <?php require_once 'core/blocks/footer.php' ?>

@@ -12,6 +12,7 @@ $hover: lighten(#161616, 1%)
 $headerSize: 75px
 
 @import 'header'
+@import 'btns'
 @import 'main'
 @import 'contacts'
 @import 'home'
@@ -44,7 +45,7 @@ a
     width: 100%
     max-width: 1300px
     margin: 0 auto
-    padding: 5rem 2rem
+    padding: 0 2rem
 
 input, select, textarea
     border: 1px solid $border
@@ -57,63 +58,3 @@ input, select, textarea
 
 ::placeholder
     color: lighten($text, 50%)
-
-.icon-btn
-    display: flex
-    align-items: center
-    justify-content: center
-    border: none
-    width: 2rem
-    height: 2rem
-    border-radius: 50%
-    background: none
-    font-size: 1.25rem
-    color: $text2
-    text-decoration: none
-    cursor: pointer
-    transition: background .2s ease, box-shadow .2s ease
-
-    &:hover
-        box-shadow: 0 0 0 10px $hover
-        background: $hover
-
-    &:active
-        box-shadow: 0 0 0 8px $hover
-
-.btn
-    border-radius: 40px
-    padding: 1rem 1.5rem
-    font-size: 0.9rem
-    text-decoration: none
-    background: $accent
-    box-shadow: 0 0 10px transparentize($accent, .5)
-    color: $bg
-    border: none
-    cursor: pointer
-    white-space: nowrap
-    transition: opacity .2s, transform .2s ease
-
-    &:hover
-        opacity: .9
-
-    &:active
-        transform: translateY(2px)
-
-.btn-outlined
-    border-radius: 40px
-    padding: 1rem 1.5rem
-    font-size: 0.9rem
-    text-decoration: none
-    color: $accent
-    border: 1px solid $accent
-    background: none
-    cursor: pointer
-    white-space: nowrap
-    transition: background .2s, color .2s, transform .2s ease
-
-    &:hover
-        background: $accent
-        color: $bg
-
-    &:active
-        transform: translateY(2px)

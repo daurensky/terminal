@@ -4,13 +4,13 @@ require_once 'core/blocks/header.php';
 ?>
 
 <main class="sended">
-    <div class="container">
-        <div class="title">
-            <h1>Спасибо за ваше обращение, с вами свяжутся!</h1>
-        </div>
+    <h1>Спасибо за ваше обращение, с вами свяжутся!</h1>
 
-        <a href="/" class="btn">Домой</a>
-    </div>
+    <section>
+        <div class="container">
+            <a href="/" class="btn">Домой</a>
+        </div>
+    </section>
 </main>
 
 <?php require_once 'core/blocks/footer.php' ?>

@@ -49,48 +49,44 @@ $partners = [
     </div>
 
     <section class="top-sells">
+        <h1 class="section-title">Топ продаж</h1>
+
         <div class="container">
-            <div class="title">
-                <h1>Топ продаж</h1>
+            <div class="card">
+                <a href="#">
+                    <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
+                </a>
+                <a href="#" class="price">2500 ₸</a>
+                <a href="#" class="title">ААА</a>
             </div>
-            <div class="wrapper">
-                <div class="card">
-                    <a href="#">
-                        <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
-                    </a>
-                    <a href="#" class="price">2500 ₸</a>
-                    <a href="#" class="title">ААА</a>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
-                    </a>
-                    <a href="#" class="price">2500</a>
-                    <a href="#" class="title">ААА</a>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
-                    </a>
-                    <a href="#" class="price">2500</a>
-                    <a href="#" class="title">ААА</a>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
-                    </a>
-                    <a href="#" class="price">2500</a>
-                    <a href="#" class="title">ААА</a>
-                </div>
+            <div class="card">
+                <a href="#">
+                    <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
+                </a>
+                <a href="#" class="price">2500</a>
+                <a href="#" class="title">ААА</a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
+                </a>
+                <a href="#" class="price">2500</a>
+                <a href="#" class="title">ААА</a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
+                </a>
+                <a href="#" class="price">2500</a>
+                <a href="#" class="title">ААА</a>
             </div>
         </div>
     </section>
 
     <section class="about">
+        <h2 class="section-title">О компании</h2>
+
         <div class="container">
-            <div class="title">
-                <h1>О компании</h1>
-            </div>
             <p>
                 Компания «Cash Master» была образована в 2009 году. Мы занимаемся производством, продажей и сервисным обслуживанием
                 банковских и платежных терминалов. Мы являемся официальными дистрибьюторами и вендорами основных мировых
@@ -106,21 +102,18 @@ $partners = [
     </section>
 
     <section class="partners">
+        <h2 class="section-title">Наши партнеры</h2>
+
         <div class="container">
-            <div class="title">
-                <h1>Наши партнеры</h1>
-            </div>
-            <div class="wrapper">
-                <div class="partners-carousel">
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <?php foreach ($partners as $partner) { ?>
-                                <li class="glide__slide">
-                                    <img src="assets/img/<?= $partner ?>" alt="Partner">
-                                </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
+            <div class="partners-carousel">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <?php foreach ($partners as $partner) { ?>
+                            <li class="glide__slide">
+                                <img src="assets/img/<?= $partner ?>" alt="Partner">
+                            </li>
+                        <?php } ?>
+                    </ul>
                 </div>
             </div>
         </div>
