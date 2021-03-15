@@ -1,6 +1,4 @@
-<?php require_once 'core/blocks/header.php' ?>
-
-<main>
+<main class="order">
     <h1>Онлайн-заявка</h1>
 
     <section>
@@ -9,5 +7,3 @@
         </div>
     </section>
 </main>
-
-<?php require_once 'core/blocks/footer.php' ?>

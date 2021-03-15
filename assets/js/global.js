@@ -1,9 +1,9 @@
-$(document).ready(function () {
-    $('.to-top').click(function () {
+$(document).ready(() => {
+    $('.to-top').click(() => {
         window.scrollTo({
             top: 0,
         })
     })
 
-    $(":input").inputmask();
+    $(':input').inputmask()
 })

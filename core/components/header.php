@@ -1,7 +1,27 @@
 <?php
-function currentPage($name) {
+function currentPage($name)
+{
     return $_SERVER['REQUEST_URI'] === "/$name" ? 'class="active"' : '';
 }
+
+$links = [
+    [
+        'page' => 'contacts',
+        'title' => 'Контакты',
+    ],
+    [
+        'page' => 'about',
+        'title' => 'О компании',
+    ],
+    [
+        'page' => 'catalog',
+        'title' => 'Каталог',
+    ],
+    [
+        'page' => 'service',
+        'title' => 'Услуги',
+    ]
+];
 
 $scripts = [];
 ?>
@@ -17,7 +37,7 @@ $scripts = [];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" integrity="sha512-wYsVD8ho6rJOAo1Xf92gguhOGQ+aWgxuyKydjyEax4bnuEmHUt6VGwgpUqN8VlB4w50d0nt+ZL+3pgaFMAmdNQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css" integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Интернет-магазин ИП Кубахова В.Е.</title>
+    <title><?= $contacts['company_name'] ?></title>
 </head>
 
 <body>
@@ -27,15 +47,14 @@ $scripts = [];
                 <img src="assets/img/logo.png" alt="Logo" />
             </a>
             <div class="links">
-                <a href="contacts.php" <?= currentPage('contacts.php') ?>>Контакты</a>
-                <a href="about.php" <?= currentPage('about.php') ?>>О компании</a>
-                <a href="catalog.php" <?= currentPage('catalog.php') ?>>Каталог</a>
-                <a href="service.php" <?= currentPage('service.php') ?>>Услуги</a>
+                <?php foreach ($links as $link) { ?>
+                    <a href="<?= $link['page'] ?>" <?= currentPage($link['page']) ?>><?= $link['title'] ?></a>
+                <?php } ?>
             </div>
             <a href="order.php" class="btn online-order">Онлайн-заявка</a>
             <div class="actions">
                 <div class="phone">
-                    <a href="tel:+7 (778) 228-14-14">+7 (778) 228-14-14</a>
+                    <a href="tel:<?= $contacts['phone'] ?>"><?= $contacts['phone'] ?></a>
                 </div>
                 <a href="cart.php" class="cart icon-btn">
                     <i class="material-icons-outlined">shopping_cart</i>

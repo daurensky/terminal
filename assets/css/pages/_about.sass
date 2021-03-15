@@ -1,0 +1,83 @@
+main.about
+    section.selectors
+        padding-bottom: 0
+
+        .container
+            display: flex
+            justify-content: center
+
+            .selector
+                display: flex
+
+                &-item
+                    padding: 1rem 2rem
+                    border-radius: 10px
+                    margin-right: 2rem
+                    transition: .2s ease
+                    cursor: pointer
+
+                    &:last-child
+                        margin-right: 0
+
+                    &.active, &:hover
+                        background: $bg
+                        box-shadow: 0 0 10px transparentize(#000, 0.95)
+
+    .dynamic-sections
+        display: none
+
+        &.active
+            display: block
+
+    section.projects
+        .container
+            display: flex
+            flex-wrap: wrap
+            padding: 0 4px
+
+            .column
+                flex: 25%
+                max-width: 25%
+                padding: 0 4px
+
+                img
+                    margin-top: 8px
+                    vertical-align: middle
+                    width: 100%
+
+    section.coop
+        .container
+            text-align: center
+
+    section.jobs
+        .container
+            .card
+                display: block
+                background: $bg
+                border-radius: 10px
+                padding: 2rem
+                text-decoration: none
+                margin-bottom: 2rem
+
+                &:last-child
+                    margin-bottom: 0
+
+                &:hover
+                    .header .title
+                        color: $accent
+
+                .header
+                    border-bottom: 1px solid $border
+                    padding-bottom: 1rem
+
+                    .title
+                        color: $text
+                        font-size: 1.5rem
+                        transition: .2s ease
+
+                .body
+                    padding-top: 1rem
+                    padding-left: 0.5rem
+
+                    .description
+                        color: $text2

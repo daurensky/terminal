@@ -1,5 +1,3 @@
-<?php require_once 'core/blocks/header.php' ?>
-
 <main class="contacts">
     <h1>Контакты</h1>
 
@@ -8,15 +6,15 @@
             <div class="text">
                 <div class="icon-text">
                     <i class="material-icons-outlined">place</i>
-                    <p>Республика Казахстан, г.Павлодар ул. Ломова д. 45к2</p>
+                    <p><?= $contacts['street'] ?></p>
                 </div>
                 <div class="icon-text">
                     <i class="material-icons-outlined">phone</i>
-                    <p>+7 (777) 777-77-77</p>
+                    <p><?= $contacts['phone'] ?></p>
                 </div>
                 <div class="icon-text">
                     <i class="material-icons-outlined">email</i>
-                    <p>info@online-shop.kz</p>
+                    <p><?= $contacts['email'] ?></p>
                 </div>
                 <div class="btn-wrapper">
                     <button class="btn-outlined">Реквизиты компании</button>
@@ -36,6 +34,7 @@
             </div>
         </div>
     </section>
+
     <section class="profiles">
         <div class="container">
             <div class="profile">
@@ -55,6 +54,7 @@
             </div>
         </div>
     </section>
+
     <section class="contact-form" id="contact-form">
         <div class="container">
             <div class="title">
@@ -88,5 +88,3 @@
         </div>
     </section>
 </main>
-
-<?php require_once 'core/blocks/footer.php' ?>

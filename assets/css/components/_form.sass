@@ -1,0 +1,42 @@
+form
+    width: 500px
+
+    .form-group
+        display: flex
+        flex-direction: column
+        margin-bottom: 1rem
+
+        &:last-child
+            margin-bottom: 0
+
+        label
+            margin-bottom: .5rem
+            color: $text2
+
+        textarea
+            resize: vertical
+
+        .file-btn
+            display: inline-block
+            border-radius: 40px
+            padding: 1rem 1.5rem
+            font-size: 0.9rem
+            text-decoration: none
+            background: $bg3
+            box-shadow: 0 0 10px transparentize($bg3, .5)
+            // color: $text
+            cursor: pointer
+            white-space: nowrap
+            transition: opacity .2s, transform .2s ease
+
+            &:hover
+                opacity: .9
+
+            &:active
+                transform: translateY(2px)
+
+            input
+                width: 0
+                height: 0
+                margin: 0
+                padding: 0

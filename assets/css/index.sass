@@ -1,23 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap')
 
-$accent: #ff8c00
-$bg: #161616
-$bg2: #1c1c1c
-$bg3: #333333
-$text: #fff
-$text2: #aaa
-$border: #282828
-$hover: lighten(#161616, 1%)
+@import 'vars'
+@import 'mixins'
 
-$headerSize: 75px
+@import 'components/header'
+@import 'components/btns'
+@import 'components/footer'
+@import 'components/form'
 
-@import 'header'
-@import 'btns'
-@import 'main'
-@import 'contacts'
-@import 'home'
-@import 'sended'
-@import 'footer'
+@import 'pages/contacts'
+@import 'pages/home'
+@import 'pages/sended'
+@import 'pages/service'
+@import 'pages/about'
 
 *
     padding: 0
@@ -28,27 +23,39 @@ $headerSize: 75px
     &:focus
         outline: none
 
+::placeholder
+    color: lighten($text, 50%)
+
 html
     scroll-behavior: smooth
 
 body
-    display: flex
-    flex-direction: column
+    @include flexColumn
     min-height: 100vh
     background: $bg2
     color: $text
 
-a
-    color: $accent
-
-.container
+main
+    flex-grow: 1
     width: 100%
-    max-width: 1300px
-    margin: 0 auto
-    padding: 0 2rem
+
+    h1
+        display: block
+        text-align: center
+        margin-top: 5rem
+        font-size: 2rem
+
+    section
+        padding: 5rem 0
+
+        h2
+            display: block
+            text-align: center
+            margin-bottom: 3rem
+            font-size: 1.8rem
 
 input, select, textarea
-    border: 1px solid $border
+    @include border
     padding: .7rem 1rem
     border-radius: 10px
     font-size: 1rem
@@ -56,5 +63,26 @@ input, select, textarea
     color: $text
     resize: vertical
 
-::placeholder
-    color: lighten($text, 50%)
+a
+    color: $accent
+
+ul, ol
+    list-style-position: inside
+
+.container
+    width: 100%
+    max-width: 1300px
+    margin: 0 auto
+    padding: 0 2rem
+
+.btns-container
+    *
+        margin-right: 1rem
+
+        &:last-child
+            margin-right: 0
+
+.texts-container
+    p, ul, ol, b
+        display: block
+        margin-bottom: 1rem

@@ -1,5 +1,7 @@
 main.home
-    .glide
+    section.slider
+        padding: 0
+
         .glide__slide
             position: relative
 
@@ -57,39 +59,40 @@ main.home
                     width: .7rem
                     height: .7rem
 
-    .top-sells .container
-        display: grid
-        grid-template-columns: repeat(4, 1fr)
-        gap: 1rem
+    section.top-sells
+        .container
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            gap: 1rem
 
-        .card
-            display: flex
-            flex-direction: column
-            align-items: center
-            border-radius: 10px
-            background: $bg
-            overflow: hidden
+            .card
+                display: flex
+                flex-direction: column
+                align-items: center
+                border-radius: 10px
+                background: $bg
+                overflow: hidden
 
-            a
-                text-decoration: none
+                a
+                    text-decoration: none
 
-                img
-                    width: 100%
+                    img
+                        width: 100%
 
-                .price
-                    font-weight: bold
-                    margin: 1rem 0
-                    font-size: 1.5rem
+                    .price
+                        font-weight: bold
+                        margin: 1rem 0
+                        font-size: 1.5rem
 
-                .title
-                    color: $text
-                    margin-bottom: 2rem
-                    transition: color .2s ease
+                    .title
+                        color: $text
+                        margin-bottom: 2rem
+                        transition: color .2s ease
 
-                    &:hover
-                        color: $accent
+                        &:hover
+                            color: $accent
 
-    .about
+    section.about
         background: $bg
 
         p
@@ -100,6 +103,6 @@ main.home
             &:last-child
                 margin-bottom: 0
 
-    .partners
+    section.partners
         img
             border-radius: 10px
