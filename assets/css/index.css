@@ -291,6 +291,8 @@ form .form-group .file-btn input {
   height: 0;
   margin: 0;
   padding: 0;
+  border: none;
+  margin-top: -1rem;
 }
 
 form .form-group .error:not(:empty) {
@@ -356,6 +358,47 @@ form .form-group .error:not(:empty) {
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   z-index: -1;
+}
+
+.product-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background: #161616;
+  overflow: hidden;
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.product-card a img {
+  width: 100%;
+}
+
+.product-card .price {
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.product-card .title {
+  color: #fff;
+  margin: 0 1rem 2rem;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+.product-card .title:hover {
+  color: #ff8c00;
 }
 
 main.contacts {
@@ -887,56 +930,21 @@ main.catalog section .container aside.categories a:last-child {
 main.catalog section .container .products {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
-
-main.catalog section .container .products .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 10px;
-  background: #161616;
-  overflow: hidden;
-}
-
-main.catalog section .container .products .card a {
-  text-decoration: none;
-}
-
-main.catalog section .container .products .card a img {
-  width: 100%;
-}
-
-main.catalog section .container .products .card .price {
-  font-weight: bold;
-  margin: 1rem 0;
-  font-size: 1.5rem;
-}
-
-main.catalog section .container .products .card .title {
-  color: #fff;
-  margin-bottom: 2rem;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
-}
-
-main.catalog section .container .products .card .title:hover {
-  color: #ff8c00;
 }
 
 main.cabinet section .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main.cabinet section .container:not(.admin) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main.cabinet section .container .products {
@@ -1061,5 +1069,14 @@ ul, ol {
 .texts-container p, .texts-container ul, .texts-container ol, .texts-container b {
   display: block;
   margin-bottom: 1rem;
+}
+
+.alert {
+  color: green;
+  border: 2px solid green;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(0, 128, 0, 0.05);
 }
 /*# sourceMappingURL=index.css.map */

@@ -3,7 +3,7 @@
 $categories = DB::call()->query('SELECT id, name, logo FROM categories')->fetchAll();
 
 if (isset($_GET['category'])) {
-    $products = DB::call()->query('SELECT id, name, price FROM products WHERE category_id = ?', [$_GET['category']])->fetchAll();
+    $products = DB::call()->query('SELECT id, name, price, image FROM products WHERE category_id = ?', [$_GET['category']])->fetchAll();
 }
 
 function activeClass($id)
@@ -32,9 +32,9 @@ function activeClass($id)
                 <?php if ($products) { ?>
                     <div class="products">
                         <?php foreach ($products as $product) { ?>
-                            <div class="card">
+                            <div class="product-card">
                                 <a href="product?id=<?= $product['id'] ?>">
-                                    <img src="<?= $product['logo'] ?>" alt="<?= $product['name'] ?>">
+                                    <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>">
                                 </a>
                                 <a href="product?id=<?= $product['id'] ?>" class="price"><?= $product['price'] ?> ₸</a>
                                 <a href="product?id=<?= $product['id'] ?>" class="title"><?= $product['name'] ?></a>

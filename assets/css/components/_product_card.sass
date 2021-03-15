@@ -1,0 +1,26 @@
+.product-card
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-radius: 10px
+    background: $bg
+    overflow: hidden
+
+    a
+        text-decoration: none
+
+        img
+            width: 100%
+
+    .price
+        font-weight: bold
+        margin: 1rem 0
+        font-size: 1.5rem
+
+    .title
+        color: $text
+        margin: 0 1rem 2rem
+        transition: color .2s ease
+
+        &:hover
+            color: $accent

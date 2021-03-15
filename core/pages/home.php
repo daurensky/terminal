@@ -46,28 +46,28 @@ $scripts = ['home'];
         <h2>Топ продаж</h2>
 
         <div class="container">
-            <div class="card">
+            <div class="product-card">
                 <a href="#">
                     <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
                 </a>
                 <a href="#" class="price">2500 ₸</a>
                 <a href="#" class="title">ААА</a>
             </div>
-            <div class="card">
+            <div class="product-card">
                 <a href="#">
                     <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
                 </a>
                 <a href="#" class="price">2500</a>
                 <a href="#" class="title">ААА</a>
             </div>
-            <div class="card">
+            <div class="product-card">
                 <a href="#">
                     <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
                 </a>
                 <a href="#" class="price">2500</a>
                 <a href="#" class="title">ААА</a>
             </div>
-            <div class="card">
+            <div class="product-card">
                 <a href="#">
                     <img src="https://cashmaster.kz/public/storage/images/qrX3MmJHGZj0zm3TmdgHXv6yb77dTjz5lzr6Lo2j.webp" alt="Card">
                 </a>
