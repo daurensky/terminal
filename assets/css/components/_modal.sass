@@ -1,0 +1,44 @@
+.modal-container
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .modal
+        background: $bg
+        border-radius: 10px
+        max-width: 800px
+        margin: 0 2rem
+        padding: 2rem
+
+        .header
+            border-bottom: 1px solid $border
+            padding-bottom: 1rem
+
+            .title
+                font-size: 1.5rem
+
+        .body
+            padding-top: 1rem
+
+            p
+                margin-bottom: 1rem
+
+                &:last-child
+                    margin-bottom: 0
+
+        .footer
+            padding-top: 1rem
+
+    .overlay
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0, 0, 0, .8)
+        z-index: -1

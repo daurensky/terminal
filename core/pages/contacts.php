@@ -56,12 +56,10 @@
     </section>
 
     <section class="contact-form" id="contact-form">
-        <div class="container">
-            <div class="title">
-                <h1>Пишите нам</h1>
-            </div>
+        <h2>Пишите нам</h2>
 
-            <form action="sended.php" method="POST">
+        <div class="container">
+            <form action="sended" method="POST">
                 <div class="form-column">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Ваше имя" required>

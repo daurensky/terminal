@@ -1,12 +1,18 @@
 <?php
 
 if ($_POST) {
-    $state = (new DB)->query(
-        'INSERT INTO appeals (name, phone, type, message) VALUES (?, ?, ?, ?)',
-        [$_POST['name'], $_POST['phone'], $_POST['type'], $_POST['message']]
-    );
+    $_POST = array_map('trim', $_POST);
 
-    $state->execute();
+    DB::call()
+        ->query(
+            'INSERT INTO appeals (name, phone, type, message) VALUES (?, ?, ?, ?)',
+            [
+                $_POST['name'],
+                clearPhone($_POST['phone']),
+                $_POST['type'],
+                $_POST['message']
+            ]
+        );
 }
 
 ?>

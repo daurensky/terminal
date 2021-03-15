@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once 'core/db.php';
 
@@ -6,10 +7,22 @@ $firstPage = substr($_SERVER['REDIRECT_URL'], 1);
 
 $isHomePage = $_SERVER['REDIRECT_URL'] === NULL;
 $isPageExist = file_exists("$firstPage.php");
+$redirectUrl = null;
 
 function page($pageName)
 {
     return "core/pages/$pageName.php";
+}
+
+function clearPhone($phone)
+{
+    return preg_replace('/\D/', '', $phone);
+}
+
+function redirect($url)
+{
+    global $redirectUrl;
+    $redirectUrl = $url;
 }
 
 # Глобальные данные

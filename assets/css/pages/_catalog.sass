@@ -1,0 +1,88 @@
+main.catalog
+    section
+        .container
+            display: flex
+
+            .select-category
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                gap: 1rem
+                margin: 0 auto
+
+                a
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    color: $text2
+                    background: $bg
+                    border-radius: 10px
+                    text-decoration: none
+                    overflow: hidden
+
+                    &:hover
+                        p
+                            color: $text
+
+                    p
+                        padding: 3rem
+                        width: 100%
+                        transition: .2s ease
+
+            aside.categories
+                display: flex
+                flex-direction: column
+                background: $bg
+                margin-right: 2rem
+                border-radius: 10px
+                width: 300px
+                padding: 0 1rem
+
+                a
+                    color: $text2
+                    text-decoration: none
+                    padding: 1rem 2rem
+                    width: 100%
+                    border-bottom: 1px solid $border
+                    transition: .2s ease
+
+                    &.active, &:hover
+                        color: $text
+
+                    &:first-child
+                        padding-top: 2rem
+
+                    &:last-child
+                        padding-bottom: 2rem
+                        border: none
+
+            .products
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+                gap: 1rem
+
+                .card
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    border-radius: 10px
+                    background: $bg
+                    overflow: hidden
+
+                    a
+                        text-decoration: none
+
+                        img
+                            width: 100%
+
+                    .price
+                        font-weight: bold
+                        margin: 1rem 0
+                        font-size: 1.5rem
+
+                    .title
+                        color: $text
+                        margin-bottom: 2rem
+                        transition: color .2s ease
+
+                        &:hover
+                            color: $accent

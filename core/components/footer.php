@@ -15,6 +15,11 @@
 <?php foreach ($scripts as $script) { ?>
     <script src="assets/js/<?= $script ?>.js"></script>
 <?php } ?>
+<?php if ($redirectUrl) { ?>
+    <script>
+        window.location.href = '<?= $redirectUrl ?>'
+    </script>
+<?php } ?>
 </body>
 
 </html>

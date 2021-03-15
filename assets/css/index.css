@@ -101,6 +101,14 @@ header .container .actions .user {
   margin-left: 1rem;
 }
 
+header .container .actions .cabinet {
+  margin-left: 1rem;
+  width: 6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .icon-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -228,10 +236,6 @@ footer > .container {
   color: #aaa;
 }
 
-form {
-  width: 500px;
-}
-
 form .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,6 +291,71 @@ form .form-group .file-btn input {
   height: 0;
   margin: 0;
   padding: 0;
+}
+
+form .form-group .error:not(:empty) {
+  margin-top: 1rem;
+  color: red;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-container .modal {
+  background: #161616;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 2rem;
+  padding: 2rem;
+}
+
+.modal-container .modal .header {
+  border-bottom: 1px solid #282828;
+  padding-bottom: 1rem;
+}
+
+.modal-container .modal .header .title {
+  font-size: 1.5rem;
+}
+
+.modal-container .modal .body {
+  padding-top: 1rem;
+}
+
+.modal-container .modal .body p {
+  margin-bottom: 1rem;
+}
+
+.modal-container .modal .body p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-container .modal .footer {
+  padding-top: 1rem;
+}
+
+.modal-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
 }
 
 main.contacts {
@@ -376,7 +445,7 @@ main.contacts .contact-form {
   border-top: 1px solid #282828;
 }
 
-main.contacts .contact-form form {
+main.contacts .contact-form .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,26 +458,25 @@ main.contacts .contact-form form {
           align-items: center;
 }
 
-main.contacts .contact-form form .form-column {
+main.contacts .contact-form .container .form-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main.contacts .contact-form form .form-column .form-group {
+main.contacts .contact-form .container .form-column .form-group {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: .5rem;
+}
+
+main.contacts .contact-form .container .form-column .form-group input, main.contacts .contact-form .container .form-column .form-group select, main.contacts .contact-form .container .form-column .form-group textarea {
   width: 300px;
-  padding: .5rem;
 }
 
-main.contacts .contact-form form .form-column .form-group input, main.contacts .contact-form form .form-column .form-group select, main.contacts .contact-form form .form-column .form-group textarea {
-  width: 100%;
-}
-
-main.contacts .contact-form form .form-column .form-group button {
+main.contacts .contact-form .container .form-column .form-group button {
   margin-top: 1rem;
   float: right;
 }
@@ -532,20 +600,20 @@ main.home section.top-sells .container .card a img {
   width: 100%;
 }
 
-main.home section.top-sells .container .card a .price {
+main.home section.top-sells .container .card .price {
   font-weight: bold;
   margin: 1rem 0;
   font-size: 1.5rem;
 }
 
-main.home section.top-sells .container .card a .title {
+main.home section.top-sells .container .card .title {
   color: #fff;
   margin-bottom: 2rem;
   -webkit-transition: color .2s ease;
   transition: color .2s ease;
 }
 
-main.home section.top-sells .container .card a .title:hover {
+main.home section.top-sells .container .card .title:hover {
   color: #ff8c00;
 }
 
@@ -567,8 +635,13 @@ main.home section.partners img {
   border-radius: 10px;
 }
 
-section.sended .container {
-  border: 1px solid #282828;
+section.sended .container .btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main.service section.partners {
@@ -685,6 +758,201 @@ main.about section.jobs .container .card .body {
 
 main.about section.jobs .container .card .body .description {
   color: #aaa;
+}
+
+main.login .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.login .container form {
+  width: 500px;
+}
+
+main.register .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.register .container form {
+  width: 500px;
+}
+
+main.register .container form .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+}
+
+main.register .container form .login .btn-outlined {
+  margin-left: 1rem;
+}
+
+main.catalog section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.catalog section .container .select-category {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+main.catalog section .container .select-category a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #aaa;
+  background: #161616;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+main.catalog section .container .select-category a:hover p {
+  color: #fff;
+}
+
+main.catalog section .container .select-category a p {
+  padding: 3rem;
+  width: 100%;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+main.catalog section .container aside.categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #161616;
+  margin-right: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  padding: 0 1rem;
+}
+
+main.catalog section .container aside.categories a {
+  color: #aaa;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-bottom: 1px solid #282828;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+main.catalog section .container aside.categories a.active, main.catalog section .container aside.categories a:hover {
+  color: #fff;
+}
+
+main.catalog section .container aside.categories a:first-child {
+  padding-top: 2rem;
+}
+
+main.catalog section .container aside.categories a:last-child {
+  padding-bottom: 2rem;
+  border: none;
+}
+
+main.catalog section .container .products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+main.catalog section .container .products .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background: #161616;
+  overflow: hidden;
+}
+
+main.catalog section .container .products .card a {
+  text-decoration: none;
+}
+
+main.catalog section .container .products .card a img {
+  width: 100%;
+}
+
+main.catalog section .container .products .card .price {
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+main.catalog section .container .products .card .title {
+  color: #fff;
+  margin-bottom: 2rem;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+main.catalog section .container .products .card .title:hover {
+  color: #ff8c00;
+}
+
+main.cabinet section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.cabinet section .container .products {
+  margin-right: 2rem;
+  width: 100%;
+}
+
+main.cabinet section .container .profile {
+  width: 350px;
+  background: #161616;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+main.cabinet section .container .profile .logout-btn {
+  margin-top: 2rem;
 }
 
 * {

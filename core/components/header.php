@@ -1,7 +1,9 @@
 <?php
+
 function currentPage($name)
 {
-    return $_SERVER['REQUEST_URI'] === "/$name" ? 'class="active"' : '';
+    global $firstPage;
+    return $firstPage === $name ? 'class="active"' : '';
 }
 
 $links = [
@@ -56,12 +58,18 @@ $scripts = [];
                 <div class="phone">
                     <a href="tel:<?= $contacts['phone'] ?>"><?= $contacts['phone'] ?></a>
                 </div>
-                <a href="cart.php" class="cart icon-btn">
+                <a href="cart" class="cart icon-btn">
                     <i class="material-icons-outlined">shopping_cart</i>
                 </a>
-                <a href="login.php" class="user icon-btn">
-                    <i class="material-icons-outlined">person</i>
-                </a>
+                <?php if ($_SESSION['user']) { ?>
+                    <a href="cabinet" class="cabinet">
+                        <?= $_SESSION['user']['name'] ?>
+                    </a>
+                <?php } else { ?>
+                    <a href="login" class="user icon-btn">
+                        <i class="material-icons-outlined">person</i>
+                    </a>
+                <?php } ?>
             </div>
         </div>
     </header>
